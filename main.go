@@ -39,7 +39,7 @@ func main() {
 	}
 
 	flag.IntVar(&httpPort, "port", 8001, "The HTTP port on which to listen")
-	flag.StringVar(&stateFile, "stateFile", "state", "File to use for maintaining our markov chain state")
+	flag.StringVar(&stateFile, "stateFile", "state", "File to use for maintaining our url list state")
 	flag.StringVar(&botUsername, "botUsername", "oldbot", "The name of the bot when it speaks")
 
 	var importDir = flag.String("importDir", "", "The directory of a Slack export")

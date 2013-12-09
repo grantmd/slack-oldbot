@@ -25,7 +25,9 @@ func init() {
 		urls := extractUrls(incomingText)
 		for _, url := range urls {
 			log.Printf("Checking url: %s", url)
-			if len(urlsUsed.Get(url)) > 0 {
+			uses := urlsUsed.Get(url)
+			if len(uses) > 0 {
+				log.Printf("Uses: %q", uses)
 				var response WebhookResponse
 				response.Username = botUsername
 				response.Text = "Ooooooooooold!"
