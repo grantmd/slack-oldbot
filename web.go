@@ -22,6 +22,11 @@ func init() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		incomingText := r.PostFormValue("text")
 		log.Printf("Handling incoming request: %s", incomingText)
+
+		if r.PostFormValue("user_id") == "USLACKBOT" {
+			return
+		}
+
 		urls := extractUrls(incomingText)
 		for _, url := range urls {
 			log.Printf("Checking url: %s", url)
