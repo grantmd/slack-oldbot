@@ -1,6 +1,8 @@
 slack-oldbot
 =======
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/grantmd/slack-oldbot.svg)](https://pkg.go.dev/github.com/grantmd/slack-oldbot)
+
 A bot for [Slack](https://slack.com) written in Go (golang) that politely reports when a link has been used before in the channel.
 
 Usage
